@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Analytics Dashboard | Mobius</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename ='css/style.css')}}">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="{{ url_for('static', filename ='css/phone.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+    <style>
+        /* img{
+            width: 200px;
+            height: 200px;
+        } */
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="{{ url_for('static', filename ='mobiuslogo.jpg')}}" alt="SolarDashboard">
+        </div>
+        <ul>
+            <li class="item"><a href="/">Home</a></li>
+            <li class="item"><a href="#services">Services</a></li>
+            <li class="item"><a href="/home">Single Point Forecast</a></li>
+            <li class="item"><a href="/Bulk_Forecast">Bulk Forecast</a></li>
+            <li class="item"><a href="#client-section">Our Clients</a></li>
+            <!-- <li class="item"><a href="#contact">Contact Us</a></li> -->
+            <!-- <li class="item"><a href="#contact"></a></li> -->
+        </ul>
+
+    </nav>
+    {% block body %}{% endblock %}
+    
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="{{ url_for('static', filename ='img/hp.jpg')}}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{{ url_for('static', filename ='img/apple.png')}}" alt="Our Client">
+            </div>
+            <div class="client-item">
+                <img src="{{ url_for('static', filename ='img/skype.png')}}" alt="Our Client">
+            </div>
+                <div class="client-item">
+                    <img src="{{ url_for('static', filename ='img/Genpact_logo.svg.png')}}" alt="Our Client">
+                </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="center">
+            Copyright &copy SolarDashboard All rights reserved
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+    {% block body %}
+
+<!-- <img src="img/download1.png" alt=""> -->
+<h2><div style="text-align:center">Irradiance Prediction for Bulk Data</div></h2>
+<form method = "post" enctype="multipart/form-data" action = submit>
+    <input type = "file" name = "file"/>
+    <input type = "submit"/>
+    <!-- <a href="/submit"></a> -->
+</form>
+<p>
+    {{message}}
+</p>
+<div class="container" style="text-align:center">
+  <a href="/download" target="blank"><button class='btn btn-default'>Download output</button></a>
+ </div>
+{% endblock %}

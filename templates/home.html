@@ -1,0 +1,63 @@
+
+    {% extends "layout.html" %}
+    {% block body %}
+
+
+    <!-- <img src="img/download1.png" alt=""> -->
+    <h1><div style="text-align:center"><font >Irradiance prediction using weather data</font></div></h1>
+    <hr>
+    </br>
+
+    <h2><div style="text-align:center">Enter the values for weather variables</div></h2>
+    </br>
+   
+    <div class='container'>
+      <div class='row'>
+        <div class='col-6'>
+          <form method="POST" action="/predict">
+            <div class="form-group">
+              <label for="Temperature"><p class="font-weight-bold">Temperature(K)</p></label>
+              <input type="number" name="Temperature">
+              <small id="Temperature" class="form-text text-muted">Enter Temperature(294-311)</small>
+              </div>
+
+            <div class="form-group">
+                <label for="RelativeHumidity"><p class="font-weight-bold">RelativeHumidity</p></label>
+                <input type="number" name="RelativeHumidity">
+                <small id="RelativeHumidity" class="form-text text-muted">Enter relative Humidity(30-100)</small>
+                </div>
+            <div class="form-group">
+                    <label for="Pressure"><p class="font-weight-bold">Pressure</p></label>
+                    <input type="number" name="Pressure">
+                    <small id="Pressure" class="form-text text-muted">Enter Pressure(900-1050)</small>
+                    </div>
+            <div class="form-group">
+                    <label for="Windspeed"><p class="font-weight-bold">Windspeed(m/sec)</p></label>
+                    <input type="number" name="Windspeed">
+                    <small id="Windspeed" class="form-text text-muted">Enter Windspeed(2-14)</small>
+                    </div>
+            <div class="form-group">
+                    <label for="Winddirection"><p class="font-weight-bold">Winddirection</p></label>
+                    <input type="number" name="Winddirection">
+                    <small id="Winddirection" class="form-text text-muted">Enter Winddirection(1-360)</small>
+                    </div>
+            <div class="form-group">
+                    <label for="Rainfall"><p class="font-weight-bold">Rainfall(mm)</p></label>
+                    <input type="number" name="Rainfall">
+                    <small id="Rainfall" class="form-text text-muted">Enter Rainfall(0-1)</small>
+                    </div>
+            <div class="form-group">
+                    <label for="ShortWave"><p class="font-weight-bold">ShortWaveIrradiation</p></label>
+                    <input type="number" name="ShortWave">
+                    <small id="ShortWave" class="form-text text-muted">Enter ShortWaveIrradiation(0-1000)</small>
+                    </div>
+
+
+                        <input class='btn btn-primary' type='submit' value='Submit'>
+            </form>
+              
+          </div>
+          </div>
+          </div>
+  
+{% endblock %}
