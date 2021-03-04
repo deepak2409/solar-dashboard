@@ -7,6 +7,11 @@ import numpy as np
 import pandas as pd, xlrd, openpyxl
 
 
+
+
+    
+
+
 UPLOAD_FOLDER = 'C:\\Users\\HP Account\\Desktop\\Mobius-Internship\\Solar Analytics\\SolarApp_V2'
 ALLOWED_EXTENSIONS = {'xlsx'}
 
@@ -85,4 +90,4 @@ def downloadFile():
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run()
